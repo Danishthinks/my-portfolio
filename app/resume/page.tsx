@@ -118,15 +118,26 @@ export default function ResumePage() {
                       <h3 className="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
                         {exp.title}
                       </h3>
-                      <p className="text-sm font-semibold text-indigo-600">
-                        {exp.organization}
-                        {exp.location && (
-                          <span className="text-slate-400 font-normal">
-                            {" "}
-                            • {exp.location}
+                      <div className="flex items-center gap-2 mt-0.5">
+                        <p className="text-sm font-semibold text-indigo-600">
+                          {exp.organization}
+                          {exp.location && (
+                            <span className="text-slate-400 font-normal">
+                              {" "}
+                              • {exp.location}
+                            </span>
+                          )}
+                        </p>
+                        {exp.logo && (
+                          <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-slate-50 border border-slate-200/80 shadow-xs">
+                            <img
+                              src={exp.logo}
+                              alt={exp.organization}
+                              className="h-3.5 sm:h-4 w-auto object-contain"
+                            />
                           </span>
                         )}
-                      </p>
+                      </div>
                     </div>
 
                     <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full shrink-0 mt-1 sm:mt-0 w-fit">

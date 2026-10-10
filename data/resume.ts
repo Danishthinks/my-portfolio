@@ -7,6 +7,7 @@ export interface TimelineEntry {
   description?: string;
   bullets: string[];
   techStack?: string[];
+  logo?: string;
 }
 
 export interface SkillCategory {
@@ -21,27 +22,40 @@ export interface SkillCategory {
 
 export const experiences: TimelineEntry[] = [
   {
-    title: "Software Engineer (Contract)",
-    organization: "Iron Bridge Systems",
-    location: "Islamabad, Pakistan",
-    period: "Apr 2024 – Aug 2025",
-    type: "Part-time / Contract — completed during BSCS studies",
+    title: "MIS Developer Intern (MERN & Odoo)",
+    organization: "Airblue",
+    period: "Oct 2026 to Present",
+    type: "Internship, Management Information Systems (MIS) Department",
     bullets: [
-      "Engineered and maintained scalable client web applications, achieving 95+ Lighthouse performance scores and ensuring cross-browser compatibility across all major platforms.",
+      "Working within the MIS department to build and optimize enterprise software solutions supporting Airblue's aviation operations, bridging custom full stack web development with ERP customization.",
+      "Custom Web Development: Designing and building scalable full stack applications using the MERN stack (React.js, Node.js) to streamline internal workflows.",
+      "ERP Customization: Developing, configuring, and integrating Odoo modules to improve enterprise data management and departmental efficiency.",
+      "System Optimization: Collaborating with the technical team to troubleshoot, maintain, and enhance existing MIS infrastructure for reliability and performance.",
+    ],
+    techStack: ["React.js", "Node.js", "Odoo", "JavaScript", "REST APIs", "Git"],
+    logo: "/airblue-logo.svg",
+  },
+  {
+    title: "Full Stack Developer Intern",
+    organization: "Iron Bridge Systems",
+    period: "Jun 2025 to Aug 2025",
+    type: "Internship, completed during BSCS studies",
+    bullets: [
+      "Engineered and maintained scalable client web applications, achieving 95+ Lighthouse performance scores and ensuring cross browser compatibility across all major platforms.",
       "Architected modular, reusable codebase structures that reduced technical debt and accelerated new feature deployment cycles.",
-      "Resolved critical front-end bottlenecks and optimized asset delivery, decreasing initial page load times by 20% and boosting overall application reliability.",
+      "Resolved critical front end bottlenecks and optimized asset delivery, decreasing initial page load times by 20% and boosting overall application reliability.",
     ],
     techStack: ["JavaScript", "React", "Node.js", "HTML5", "CSS3", "REST APIs", "Git"],
   },
   {
-    title: "E-commerce Web Developer & Store Administrator (Remote)",
+    title: "Ecommerce Web Developer & Store Administrator",
     organization: "The London T",
     location: "Remote",
-    period: "Mar 2023 – Present",
-    type: "Part-time — ongoing during BSCS studies",
+    period: "Mar 2023 to Present",
+    type: "Part Time (Remote)",
     bullets: [
-      "Engineered custom Shopify e-commerce storefronts using advanced Liquid templating and JavaScript, enhancing UI/UX to increase average session duration and boost conversion rates by 15%.",
-      "Streamlined end-to-end store administration and third-party API integrations, optimizing checkout workflows to reduce cart abandonment and accelerate page load speeds.",
+      "Engineered custom Shopify ecommerce storefronts using advanced Liquid templating and JavaScript, enhancing UI/UX to increase average session duration and boost conversion rates by 15%.",
+      "Streamlined end to end store administration and third party API integrations, optimizing checkout workflows to reduce cart abandonment and accelerate page load speeds.",
     ],
     techStack: ["Shopify", "Liquid", "JavaScript", "HTML5", "CSS3", "Web Performance Optimization"],
   },
