@@ -22,7 +22,7 @@ export interface SkillCategory {
 
 export const experiences: TimelineEntry[] = [
   {
-    title: "MIS Developer Intern (MERN & Odoo)",
+    title: "Software Developer Intern (MERN & Odoo)",
     organization: "Airblue",
     period: "Oct 2026 to Present",
     type: "Internship, Management Information Systems (MIS) Department",
