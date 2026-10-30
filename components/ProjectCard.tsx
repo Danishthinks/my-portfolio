@@ -10,6 +10,9 @@ import {
   Gauge,
   Sparkles,
   Layers,
+  HelpCircle,
+  Clock,
+  ShieldCheck,
   LucideIcon,
 } from "lucide-react";
 import { ProjectItem } from "@/data/projects";
@@ -23,6 +26,8 @@ const iconMap: Record<string, LucideIcon> = {
   Gauge,
   Sparkles,
   Layers,
+  HelpCircle,
+  Clock,
 };
 
 interface ProjectCardProps {
@@ -109,17 +114,24 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             ))}
           </div>
 
-          {/* Action Button: Live Demo */}
+          {/* Action Area: Live Demo or Internal Badge */}
           <div className="pt-1">
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-indigo-600 text-white text-xs font-semibold shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group/btn"
-            >
-              <span>Live Demo</span>
-              <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-            </a>
+            {project.internalBadge ? (
+              <span className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 text-slate-500 text-xs font-semibold border border-slate-200/80 cursor-default select-none">
+                <ShieldCheck className="w-3.5 h-3.5 text-slate-400" />
+                <span>{project.internalBadge}</span>
+              </span>
+            ) : project.liveUrl ? (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-indigo-600 text-white text-xs font-semibold shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group/btn"
+              >
+                <span>Live Demo</span>
+                <ExternalLink className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+              </a>
+            ) : null}
           </div>
         </div>
       </div>

@@ -6,7 +6,11 @@ export interface ProfileData {
   email: string;
   phone: string;
   status: string;
+  heroBadge: string;
   tagline: string;
+  heroChips: string[];
+  cornerBadge: string;
+  aboutParagraphs: string[];
   summary: string;
   socials: {
     github: string;
@@ -24,19 +28,37 @@ export interface ProfileData {
     value: string;
     description: string;
   }[];
+  cta: {
+    title: string;
+    description: string;
+    buttonText: string;
+  };
 }
 
 export const profileData: ProfileData = {
   name: "Danish Khan",
-  role: "Full-Stack Software Engineer",
+  role: "Odoo & Full Stack Developer",
   avatarUrl: "/bitmoji.png",
   location: "Islamabad, Pakistan",
   email: "danishmuhammad0990@gmail.com",
   phone: "+92-325-4334934",
   status: "Available for opportunities",
-  tagline: "Full-Stack Software Engineer specializing in scalable web applications and seamless user experiences.",
+  heroBadge: "Odoo ERP and Full Stack Engineering",
+  tagline:
+    "I build custom Odoo modules in Python and PostgreSQL, and full stack web apps with React, Node.js and ASP.NET Core.",
+  heroChips: [
+    "Odoo ERP & OWL",
+    "Python & PostgreSQL",
+    "React / Next.js",
+    "Node.js & ASP.NET Core",
+  ],
+  cornerBadge: "Odoo & Full Stack",
+  aboutParagraphs: [
+    "I'm a software developer based in Islamabad, Pakistan. I'm currently an intern in the MIS department at Airblue, where I build custom Odoo modules in Python, PostgreSQL, XML and OWL, along with internal web tools in React and Node.js.",
+    "Before Odoo I worked mainly in React, Node.js and ASP.NET Core, and I still build with them. I've also run Shopify storefronts for The London T since 2023, so I'm used to both business software and customer facing web apps.",
+  ],
   summary:
-    "BSCS graduate and full stack software developer with hands-on experience building and shipping web applications across React, Node.js, Shopify, and ASP.NET Core. Comfortable owning a project end-to-end from database schema and REST API design to performance-tuned, responsive front ends with a track record of 95+ Lighthouse scores and sub-millisecond execution engines.",
+    "BSCS graduate working as an Odoo and full stack developer. I build custom Odoo modules in Python, PostgreSQL, XML and OWL, and web applications in React, Node.js and ASP.NET Core. Currently a software developer intern in the MIS department at Airblue.",
   socials: {
     github: "https://github.com/Danishthinks",
     linkedin: "https://www.linkedin.com/in/daniishkhhan",
@@ -44,50 +66,60 @@ export const profileData: ProfileData = {
   },
   services: [
     {
+      title: "Odoo ERP Development",
+      description:
+        "Custom Odoo modules in Python, XML, QWeb and OWL: helpdesk ticketing with SLA tracking, biometric attendance sync, multi tier leave approvals and role based access rules.",
+      icon: "Layers",
+      gradient: "from-purple-500/20 to-indigo-500/20 text-purple-600",
+    },
+    {
       title: "Frontend & Web Apps",
-      description: "Crafting fluid, high-performance web applications using React, Next.js, TypeScript, and Tailwind CSS with 60 FPS animations.",
+      description:
+        "React, Next.js, TypeScript and Tailwind CSS, with Framer Motion for animation and 95+ Lighthouse scores.",
       icon: "Layout",
       gradient: "from-blue-500/20 to-cyan-500/20 text-blue-600",
     },
     {
-      title: "Backend & Systems",
-      description: "Architecting modular RESTful APIs, real-time data pipelines, and scalable services with Node.js, Express, and ASP.NET Core.",
+      title: "Backend & APIs",
+      description:
+        "REST APIs in Node.js, Express and ASP.NET Core, backed by PostgreSQL, MySQL and Firebase.",
       icon: "Server",
       gradient: "from-indigo-500/20 to-purple-500/20 text-indigo-600",
     },
     {
-      title: "E-Commerce Architecture",
-      description: "Engineering custom Shopify storefronts with Liquid & JavaScript, boosting conversion rates and cutting checkout friction.",
+      title: "Ecommerce",
+      description:
+        "Custom Shopify storefronts with Liquid and JavaScript, focused on conversion and checkout speed.",
       icon: "ShoppingBag",
       gradient: "from-emerald-500/20 to-teal-500/20 text-emerald-600",
-    },
-    {
-      title: "Performance & Precision",
-      description: "Sub-millisecond latency optimizations, binary manipulation engines, memory profiling, and 95+ Lighthouse benchmarks.",
-      icon: "Zap",
-      gradient: "from-amber-500/20 to-orange-500/20 text-amber-600",
     },
   ],
   stats: [
     {
       label: "Lighthouse Score",
       value: "95+",
-      description: "Optimized web performance & SEO",
+      description: "Optimized web performance and SEO",
     },
     {
       label: "Conversion Boost",
       value: "+15%",
-      description: "Via streamlined UI/UX checkout flows",
+      description: "Via improved UI/UX and checkout flows",
     },
     {
-      label: "Execution Latency",
-      value: "<1ms",
-      description: "Sub-millisecond high-precision timing",
+      label: "Odoo Modules Built",
+      value: "2",
+      description: "Helpdesk and HRMS at Airblue",
     },
     {
-      label: "Production Apps",
-      value: "5+",
-      description: "Shipped full-stack web platforms",
+      label: "Projects Built",
+      value: "7",
+      description: "Odoo, full stack and interactive apps",
     },
   ],
+  cta: {
+    title: "Want to see what I've built?",
+    description:
+      "Explore Odoo modules, full stack apps and interactive tools, from helpdesk and HR systems to AI stock forecasting and F1 telemetry.",
+    buttonText: "Explore Projects",
+  },
 };

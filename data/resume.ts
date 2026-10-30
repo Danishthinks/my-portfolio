@@ -15,7 +15,7 @@ export interface SkillCategory {
   icon: string;
   skills: {
     name: string;
-    level: string; // e.g. "Advanced", "Proficient"
+    level: string;
     highlight?: boolean;
   }[];
 }
@@ -27,12 +27,22 @@ export const experiences: TimelineEntry[] = [
     period: "Oct 2026 to Present",
     type: "Internship, Management Information Systems (MIS) Department",
     bullets: [
-      "Working within the MIS department to build and optimize enterprise software solutions supporting Airblue's aviation operations, bridging custom full stack web development with ERP customization.",
-      "Custom Web Development: Designing and building scalable full stack applications using the MERN stack (React.js, Node.js) to streamline internal workflows.",
-      "ERP Customization: Developing, configuring, and integrating Odoo modules to improve enterprise data management and departmental efficiency.",
-      "System Optimization: Collaborating with the technical team to troubleshoot, maintain, and enhance existing MIS infrastructure for reliability and performance.",
+      "Work in the MIS department on internal software for Airblue's aviation operations, with custom web applications and Odoo modules.",
+      "Web Development: Build internal tools with React.js and Node.js when a workflow needs more than the Odoo client.",
+      "Odoo Development: Build and configure custom Odoo modules in Python, XML and OWL for helpdesk ticketing and HR attendance and leave management.",
+      "Integrations: Connect Odoo to an email parsing API and to ZKTeco biometric devices through scheduled cron jobs.",
+      "System Support: Work with the technical team to troubleshoot, maintain and improve the existing MIS systems.",
     ],
-    techStack: ["React.js", "Node.js", "Odoo", "JavaScript", "REST APIs", "Git"],
+    techStack: [
+      "React.js",
+      "Node.js",
+      "JavaScript",
+      "Odoo ERP",
+      "Python",
+      "PostgreSQL",
+      "XML",
+      "OWL",
+    ],
     logo: "/airblue-logo.svg",
   },
   {
@@ -41,23 +51,30 @@ export const experiences: TimelineEntry[] = [
     period: "Jun 2025 to Aug 2025",
     type: "Internship, completed during BSCS studies",
     bullets: [
-      "Engineered and maintained scalable client web applications, achieving 95+ Lighthouse performance scores and ensuring cross browser compatibility across all major platforms.",
-      "Architected modular, reusable codebase structures that reduced technical debt and accelerated new feature deployment cycles.",
-      "Resolved critical front end bottlenecks and optimized asset delivery, decreasing initial page load times by 20% and boosting overall application reliability.",
+      "Built and maintained client web applications that scored 95+ on Lighthouse and worked across all major browsers.",
+      "Organized the codebase into modular, reusable components, which cut technical debt and sped up delivery of new features.",
+      "Fixed front end bottlenecks and optimized asset delivery, reducing initial page load time by 20%.",
     ],
     techStack: ["JavaScript", "React", "Node.js", "HTML5", "CSS3", "REST APIs", "Git"],
   },
   {
-    title: "Ecommerce Web Developer & Store Administrator",
+    title: "Shopify Developer and Website Administrator",
     organization: "The London T",
     location: "Remote",
     period: "Mar 2023 to Present",
     type: "Part Time (Remote)",
     bullets: [
-      "Engineered custom Shopify ecommerce storefronts using advanced Liquid templating and JavaScript, enhancing UI/UX to increase average session duration and boost conversion rates by 15%.",
-      "Streamlined end to end store administration and third party API integrations, optimizing checkout workflows to reduce cart abandonment and accelerate page load speeds.",
+      "Built custom Shopify storefronts with Liquid templating and JavaScript, improving UI/UX and lifting conversion rates by 15%.",
+      "Manage store administration and third party API integrations, and reworked checkout workflows to reduce cart abandonment and page load time.",
     ],
-    techStack: ["Shopify", "Liquid", "JavaScript", "HTML5", "CSS3", "Web Performance Optimization"],
+    techStack: [
+      "Shopify",
+      "Liquid",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Web Performance Optimization",
+    ],
   },
 ];
 
@@ -66,17 +83,17 @@ export const education: TimelineEntry[] = [
     title: "Bachelor of Science in Computer Science (BSCS)",
     organization: "University of Lahore",
     location: "Pakistan",
-    period: "2022 – 2026",
+    period: "2022 to 2026",
     bullets: [
       "Core coursework in Data Structures, Algorithms, OOP, Database Systems, Computer Networks, and Software Engineering Principles.",
-      "Hands-on architectural focus on high-performance web systems and AI microcredentials.",
+      "Hands on architectural focus on high performance web systems and AI microcredentials.",
     ],
   },
   {
-    title: "FSc (Pre-Engineering)",
+    title: "FSc (Pre Engineering)",
     organization: "Punjab College",
     location: "Pakistan",
-    period: "2020 – 2022",
+    period: "2020 to 2022",
     bullets: [
       "Advanced foundations in Mathematics, Physics, Analytical Reasoning, and Logical Problem Solving.",
     ],
@@ -86,7 +103,8 @@ export const education: TimelineEntry[] = [
 export const certifications: TimelineEntry[] = [
   {
     title: "Introduction to Artificial Intelligence",
-    organization: "The University of Lahore — Centre for Microcredential-Based Skill Development",
+    organization:
+      "The University of Lahore, Centre for Microcredential Based Skill Development",
     period: "Nov 2025",
     bullets: [
       "Microcredential certification covering fundamental AI algorithms, machine learning paradigms, and automated data processing.",
@@ -103,6 +121,20 @@ export const certifications: TimelineEntry[] = [
 ];
 
 export const skillCategories: SkillCategory[] = [
+  {
+    name: "Odoo ERP",
+    icon: "Layers",
+    skills: [
+      { name: "Odoo Module Development", level: "Expert", highlight: true },
+      { name: "Odoo ORM", level: "Expert", highlight: true },
+      { name: "OWL", level: "Advanced", highlight: true },
+      { name: "QWeb", level: "Advanced", highlight: true },
+      { name: "XML RPC", level: "Advanced", highlight: true },
+      { name: "Access Rights", level: "Expert" },
+      { name: "Record Rules", level: "Expert" },
+      { name: "Cron Jobs", level: "Advanced" },
+    ],
+  },
   {
     name: "Frontend Development",
     icon: "Layout",
@@ -124,6 +156,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Node.js", level: "Advanced", highlight: true },
       { name: "Express", level: "Advanced", highlight: true },
       { name: "ASP.NET Core", level: "Proficient", highlight: true },
+      { name: "C#", level: "Advanced", highlight: true },
       { name: "Python", level: "Advanced", highlight: true },
       { name: "C++", level: "Proficient" },
       { name: "RESTful APIs", level: "Expert", highlight: true },
@@ -136,6 +169,8 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Firebase", level: "Advanced", highlight: true },
       { name: "PostgreSQL", level: "Advanced", highlight: true },
+      { name: "SQL", level: "Expert", highlight: true },
+      { name: "MySQL Server", level: "Advanced" },
       { name: "Relational DBs (SQL)", level: "Advanced" },
       { name: "NoSQL DBs", level: "Proficient" },
       { name: "Vercel / Netlify", level: "Expert" },

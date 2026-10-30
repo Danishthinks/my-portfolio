@@ -1,18 +1,72 @@
+export type ProjectCategory =
+  | "Odoo & ERP"
+  | "Full Stack"
+  | "Frontend & Interactive"
+  | "Systems & Utilities";
+
 export interface ProjectItem {
   id: string;
   title: string;
   subtitle: string;
-  category: "Full-Stack" | "Frontend & Interactive" | "Systems & Utilities";
+  category: ProjectCategory;
   description: string;
   bullets: string[];
   tags: string[];
-  liveUrl: string;
+  liveUrl?: string;
+  internalBadge?: string;
   githubUrl?: string;
   gradient: string;
   iconName: string;
 }
 
 export const projectsData: ProjectItem[] = [
+  {
+    id: "airblue-gest-helpdesk",
+    title: "Airblue GEST Helpdesk",
+    subtitle: "Enterprise Customer Support & Email Management",
+    category: "Odoo & ERP",
+    description:
+      "A custom Odoo module for Airblue's customer feedback and query handling, with a role based dashboard that keeps all support tickets in one place.",
+    bullets: [
+      "Email parsing integration that fetches incoming customer emails, routes them and matches replies to the correct ticket ID.",
+      "Role based access control built on overridden core user models, plus SLA tracking for first response time, department resolution and ticket age.",
+    ],
+    tags: ["Python", "Odoo", "PostgreSQL", "XML", "REST APIs"],
+    internalBadge: "Internal Airblue project",
+    gradient: "from-blue-600 via-indigo-600 to-sky-600",
+    iconName: "HelpCircle",
+  },
+  {
+    id: "airblue-hrms",
+    title: "Airblue HRMS",
+    subtitle: "Biometric Attendance & Custom Leave Management",
+    category: "Odoo & ERP",
+    description:
+      "Two linked Odoo HR modules covering shift tracking, attendance syncing and leave encashment.",
+    bullets: [
+      "ZKTeco biometric integration using scheduled cron jobs that pull punch data and assign shifts in Odoo.",
+      "Multi tier leave approvals routed by job position, department and work location, with OWL dashboards and record rules for line managers.",
+    ],
+    tags: ["Python", "Odoo ORM", "OWL", "QWeb", "PostgreSQL", "ZKTeco API"],
+    internalBadge: "Internal Airblue project",
+    gradient: "from-indigo-600 via-purple-600 to-pink-600",
+    iconName: "Clock",
+  },
+  {
+    id: "raw-spec",
+    title: "RAW SPEC",
+    subtitle: "High Performance Automotive Styling Catalogue",
+    category: "Full Stack",
+    description:
+      "A full stack automotive styling catalogue on ASP.NET Core MVC with an admin inventory system.",
+    bullets: [
+      "Entity Framework Core queries tuned to cut data retrieval time.",
+      "Role based access control through ASP.NET Core Identity for admin CRUD operations, with a dark themed Tailwind UI holding a 90+ Lighthouse score.",
+    ],
+    tags: ["ASP.NET Core MVC", "C#", "EF Core", "Identity", "Tailwind CSS"],
+    gradient: "from-zinc-700 via-slate-800 to-zinc-900",
+    iconName: "Gauge",
+  },
   {
     id: "ignition",
     title: "Ignition",
@@ -35,7 +89,7 @@ export const projectsData: ProjectItem[] = [
     id: "smartstock",
     title: "SmartStock",
     subtitle: "AI-Powered Inventory & Stock Forecasting",
-    category: "Full-Stack",
+    category: "Full Stack",
     description:
       "Intelligent enterprise inventory management solution utilizing machine learning models to forecast demand, prevent stock-outs, and provide POS capabilities.",
     bullets: [
